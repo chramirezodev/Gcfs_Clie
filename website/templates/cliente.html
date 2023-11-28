@@ -1,0 +1,268 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+<div class="card">
+  <div class="card-header"><strong>
+    	{{ customer_cliente.nombres }} 
+		{{ customer_cliente.apellido1 }}</strong>
+  </div>
+  <div class="card-body">
+
+
+<p class="card-text"> 
+<strong>Nombres/Razón Social: </strong>{{ customer_cliente.nombres }}</p>
+
+<p class="card-text">
+<strong>Primer Apellido: </strong>{{ customer_cliente.apellido1 }}</p>
+
+<p class="card-text">
+<strong>Segundo Apellido: </strong>{{ customer_cliente.apellido2 }}</p>
+
+<p class="card-text">
+<strong>Sexo: </strong>{{ customer_cliente.sexo }}</p>
+
+<p class="card-text">
+<strong>Fecha de nacimiento: </strong>{{ customer_cliente.fecha_nac }}</p>
+
+<p class="card-text">
+<strong>Pais de nacimiento: </strong>{{ customer_cliente.pais_nac }}</p>
+
+<p class="card-text">
+<strong>Departamento de nacimiento: </strong>{{ customer_cliente.dpto_nac }}</p>
+
+<p class="card-text">
+<strong>Ciudad de nacimiento: </strong>{{ customer_cliente.ciudad_nac }}</p>
+
+<p class="card-text">
+<strong>Tipo de identificación: </strong>{{ customer_cliente.tipo_ident }}</p>
+  
+<p class="card-text">
+<strong>Número de identificación: </strong>{{ customer_cliente.num_ident }}</p>
+  
+<p class="card-text">
+<strong>Fecha de expedición de la cédula: </strong>{{ customer_cliente.fecha_exp_cc }}</p>
+  
+<p class="card-text">
+<strong>Estado civil: </strong>{{ customer_cliente.esta_civil }}</p>
+  
+<p class="card-text">
+<strong>Nivel de estudios: </strong>{{ customer_cliente.nivel_estudio }}</p>
+  
+<p class="card-text">
+<strong>Título: </strong>{{ customer_cliente.titulo_estudio }}</p>
+  
+<p class="card-text">
+<strong>¿Es usted una Persona con Discapacidad (PcD)?: </strong>{{ customer_cliente.pcd }}</p>
+  
+<p class="card-text">
+<strong>Correo electrónico principal: </strong>{{ customer_cliente.email1 }}</p>
+
+<p class="card-text">  
+<strong>Correo electrónico secundario: </strong>{{ customer_cliente.email2 }}</p>
+    
+<p class="card-text">
+<strong>Dirección residencia: </strong>{{ customer_cliente.direccion_resi }}</p>
+    
+<p class="card-text">
+<strong>País de residencia: </strong>{{ customer_cliente.pais_resi }}</p>
+    
+<p class="card-text">
+<strong>Departamento de residencia: </strong>{{ customer_cliente.dpto_resi }}</p>
+    
+<p class="card-text">
+<strong>Ciudad de residencia: </strong>{{ customer_cliente.ciudad_resi }}</p>
+    
+<p class="card-text">
+<strong>Estrato: </strong>{{ customer_cliente.estrato_resi }}</p>
+    
+<p class="card-text">
+<strong>Teléfono residencia: </strong>{{ customer_cliente.tel_resi }}</p>
+    
+<p class="card-text">
+<strong>Teléfono celular principal: </strong>{{ customer_cliente.celular1 }}</p>
+
+<p class="card-text">
+<strong>Teléfono celular secundario: </strong>{{ customer_cliente.celular2 }}</p>
+      
+<p class="card-text">
+<strong>No. de personas a cargo: </strong>{{ customer_cliente.persona_acargo }}</p>
+      
+<p class="card-text">
+<strong>Antigüedad en la ciudad: </strong>{{ customer_cliente.antiguedad }}</p>
+      
+<p class="card-text">
+<strong>Tipo de vivienda y relación con el domicilio: </strong>{{ customer_cliente.tipo_vivienda }}</p>
+      
+<p class="card-text">
+<strong>Valor de la vivienda propia: </strong>{{ customer_cliente.valor_vivienda }}</p>
+      
+<p class="card-text">
+<strong>Dirección oficina: </strong>{{ customer_cliente.direccion_of }}</p>
+      
+<p class="card-text">
+<strong>País de oficina: </strong>{{ customer_cliente.pais_of }}</p>
+      
+<p class="card-text">
+<strong>Departamento de oficina: </strong>{{ customer_cliente.dpto_of }}</p>
+
+<p class="card-text">
+<strong>Ciudad de oficina: </strong>{{ customer_cliente.ciudad_of }}</p>
+      
+<p class="card-text">
+<strong>Teléfono oficina: </strong>{{ customer_cliente.tel_of }}</p>
+      
+<p class="card-text">
+<strong>Extensión: </strong>{{ customer_cliente.ext_of }}</p>
+      
+<p class="card-text">
+<strong>Celular oficina: </strong>{{ customer_cliente.celular1_of }}</p>
+      
+<p class="card-text">
+<strong>¿Reside en Colombia?: </strong>{{ customer_cliente.reside_colombia }}</p>
+      
+<p class="card-text">
+<strong>Nacionalidad 1: </strong>{{ customer_cliente.nacionalidad1 }}</p>
+      
+<p class="card-text">
+<strong>Nacionalidad 2: </strong>{{ customer_cliente.nacionalidad2 }}</p>
+
+<p class="card-text">
+<strong>¿Por cuál medio le gustaría recibir información comercial de G.C.F.S. S.A.S.?: </strong>{{ customer_cliente.info_comercial }}</p>
+        
+<p class="card-text">
+<strong>Nombres y apellidos conyuge: </strong>{{ customer_cliente.nombres_conyuge }}</p>
+        
+<p class="card-text">
+<strong>Tipo de identificación: </strong>{{ customer_cliente.tipo_ident_conyuge }}</p>
+        
+<p class="card-text">
+<strong>Número de identificación: </strong>{{ customer_cliente.num_ident_conyuge }}</p>
+        
+<p class="card-text">
+<strong>Teléfono conyuge: </strong>{{ customer_cliente.tel_resi_conyuge }}</p>
+        
+<p class="card-text">
+<strong>Celular principal conyuge: </strong>{{ customer_cliente.celular1_conyuge }}</p>
+        
+<p class="card-text">
+<strong>Celular secundario conyuge: </strong>{{ customer_cliente.celular2_conyuge }}</p>
+  
+<p class="card-text">
+<strong>Situación laboral: </strong>{{ customer_cliente.situacion_laboral }}</p>
+        
+<p class="card-text">
+<strong>Nombre de empresa donde trabaja / del negocio: </strong>{{ customer_cliente.empresa_actual }}</p>
+        
+<p class="card-text">
+<strong>¿Es socio de la empresa donde trabaja?: </strong>{{ customer_cliente.socio }}</p>
+        
+<p class="card-text">
+<strong>Cargo/Ocupación/Oficio: </strong>{{ customer_cliente.cargo }}</p>
+        
+<p class="card-text">
+<strong>Fecha de ingreso o inicio de actividad: </strong>{{ customer_cliente.fecha_ingreso }}</p>
+        
+<p class="card-text">
+<strong>Actividad económica de la empresa: </strong>{{ customer_cliente.actividad_economica }}</p>
+        
+<p class="card-text">
+<strong>¿Persona públicamente expuesta?: </strong>{{ customer_cliente.ppe }}</p>
+  
+<p class="card-text">
+<strong>Ingresos mensuales: </strong>{{ customer_cliente.ingresos_mensuales }}</p>
+          
+<p class="card-text">
+<strong>Otros ingresos: </strong>{{ customer_cliente.otros_ingresos }}</p>
+          
+<p class="card-text">
+<strong>Egresos mensuales: </strong>{{ customer_cliente.egresos_mensuales }}</p>
+          
+<p class="card-text">
+<strong>Total activos: </strong>{{ customer_cliente.total_activos }}</p>
+          
+<p class="card-text">
+<strong>Total pasivos: </strong>{{ customer_cliente.total_pasivo }}</p>
+          
+<p class="card-text">
+<strong>Indique a qué corresponden los otros ingresos: </strong>{{ customer_cliente.concepto_otro_ingreso }}</p>
+
+<p class="card-text">
+<strong>Procedencia de los recursos que relaciona: </strong>{{ customer_cliente.procedencia_recursos }}</p>
+            
+<p class="card-text">
+<strong>¿Declara renta?: </strong>{{ customer_cliente.declara_renta }}</p>
+            
+<p class="card-text">
+<strong>Nombres y Apellidos Referencia Familiar 1: </strong>{{ nombres_ref_fam1.id }}</p>
+
+<p class="card-text">
+<strong>Parentesco Referencia Familiar 1: </strong>{{ customer_cliente.parentesco_ref_fam1 }}</p>
+              
+<p class="card-text">
+<strong>Ciudad Referencia Familiar 1: </strong>{{ customer_cliente.ciudad_ref_fam1 }}</p>
+              
+<p class="card-text">
+<strong>Teléfono Referencia Familiar 1: </strong>{{ customer_cliente.tel_ref_fam1 }}</p>
+
+<p class="card-text">
+<strong>Celular Referencia Familiar 1: </strong>{{ customer_cliente.cel_ref_fam1 }}</p>
+                
+<p class="card-text">
+<strong>Nombres y Apellidos Referencia Familiar 2: </strong>{{ customer_cliente.nombres_ref_fam2 }}</p>
+                
+<p class="card-text">
+<strong>Parentesco Referencia Familiar 2: </strong>{{ customer_cliente.parentesco_ref_fam2 }}</p>
+
+<p class="card-text">
+<strong>Ciudad Referencia Familiar 2: </strong>{{ customer_cliente.ciudad_ref_fam2 }}</p>
+                  
+<p class="card-text">
+<strong>Teléfono Referencia Familiar 2: </strong>{{ customer_cliente.tel_ref_fam2 }}</p>
+                  
+<p class="card-text">
+<strong>Celular Referencia Familiar 2: </strong>{{ customer_cliente.cel_ref_fam2 }}</p>
+
+<p class="card-text">
+<strong>Nombres y Apellidos Referencia Personal 1: </strong>{{ customer_cliente.nombres_ref_per1 }}</p>
+                    
+<p class="card-text">
+<strong>Parentesco Referencia Personal 1: </strong>{{ customer_cliente.parentesco_ref_per1 }}</p>
+                    
+<p class="card-text">
+<strong>Ciudad Referencia Personal 1: </strong>{{ customer_cliente.ciudad_ref_per1 }}</p>
+
+<p class="card-text">
+<strong>Teléfono Referencia Personal 1: </strong>{{ customer_cliente.tel_ref_per1 }}</p>
+                      
+<p class="card-text">
+<strong>Celular Referencia Personal 1: </strong>{{ customer_cliente.cel_ref_per1 }}</p>
+                      
+<p class="card-text">
+<strong>Nombres y Apellidos Referencia Personal 2: </strong>{{ customer_cliente.nombres_ref_per2 }}</p>
+
+<p class="card-text">
+<strong>Parentesco Referencia Personal 2: </strong>{{ customer_cliente.parentesco_ref_per2 }}</p>
+                        
+<p class="card-text">
+<strong>Ciudad Referencia Personal 2: </strong>{{ customer_cliente.ciudad_ref_per2 }}</p>
+                        
+<p class="card-text">
+<strong>Teléfono Referencia Personal 2: </strong>{{ customer_cliente.tel_ref_per2 }}</p>
+
+<p class="card-text">
+<strong>Celular Referencia Personal 2: </strong>{{ customer_cliente.cel_ref_per2 }}</p>
+                          
+  </div>
+</div>
+
+<br/><br/>
+<a href="{% url 'home' %}" class="btn btn-secondary">Atrás</a>
+
+<a href="{% url 'delete_cliente' customer_cliente.id %}" class="btn btn-danger">Borrar</a>
+
+<a href="{% url 'update_cliente' customer_cliente.id %}" class="btn btn-secondary">Actualizar cliente</a>
+		
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+{% if user.is_authenticated %}
+
+
+<table class="table table-striped table-hover table-bordered table-sm ">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">NOMBRE / RAZÓN SOCIAL</th>
+      <th scope="col">TIPO DOC</th>
+      <th scope="col"># DOC</th>
+      <th scope="col">CELULAR</th>
+      <th scope="col">EMAIL</th>
+      <th scope="col">CODIGO</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+{% if clientes %}
+	{% for cliente in clientes %}
+		<tr>
+			<td>{{ cliente.nombres }} {{ cliente.apellido1 }} {{ cliente.apellido2 }}</td>
+			<td>{{ cliente.tipo_ident  }}</td>
+			<td>{{ cliente.num_ident }}</td>
+			<td>{{ cliente.celular1 }}</td>
+			<td>{{ cliente.email1 }}</td>
+			<td><a href="{% url 'cliente' cliente.id %}">{{ cliente.id }}</a></td>
+		</tr>
+	{% endfor %}
+
+{% endif %}
+
+	
+	  </tbody>
+	</table>
+
+
+
+
+
+{% else %}
+
+<div class="col-md-6 offset-md-3">
+<h1>Acceso</h1>
+<br/>
+
+<form method="POST" action="{% url 'home' %}">
+	{% csrf_token %}
+
+  <div class="mb-3">
+    <input type="text" class="form-control" name="username", placeholder="Usuario" required>
+    
+  </div><br/>
+  <div class="mb-3">
+    <input type="password" class="form-control" name="password", placeholder="Contraseña" required>
+  </div>
+  <br/>
+  <button type="submit" class="btn btn-secondary">Acceder</button>
+
+</form>
+
+
+
+{% endif %}
+
+{% endblock %}
